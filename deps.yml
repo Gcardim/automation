@@ -1,0 +1,16 @@
+---
+- name: instalando dep docker
+  hosts: docker
+  tasks:
+   - name: instalando python-pip
+     apt: 
+      name: python-pip
+
+   - name: isntalando o py docker
+     pip:
+       name: docker-py
+  
+   - name: instalando o docker
+     apt:
+      name: docker-ce
+      state: present

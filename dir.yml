@@ -1,0 +1,11 @@
+---
+- name: adicionando os dir green e blue.
+  hosts: docker
+  tasks:
+   - name: adicionando os diretorios blue e green
+     file:
+      path: "{{ item }}"
+      state: directory
+     with_items:
+      - /blue
+      - /green
